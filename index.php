@@ -17,13 +17,28 @@
 		<![endif]-->
 	</head>
 	<body>
-		<h1 class="text-center">Hello World</h1>
+		<h1 class="text-center">PHP Fun</h1>
+
+		<form method="POST" role="form">
+			<legend>Contact Form</legend>
+		
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" class="form-control" id="name" placeholder="John Snow">
+				<label for="email">Email</label>
+				<input type="text" class="form-control" id="email" placeholder="johnsnow@thewall.org">
+				<label for="message">Message</label>
+				<input type="text" class="form-control" id="message" placeholder="Winter is Coming">
+			</div>
+		
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
 
 		<!-- jQuery -->
 		<script src="//code.jquery.com/jquery.js"></script>
 		<!-- Bootstrap JavaScript -->
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
-		
+
 	</body>
 </html>
