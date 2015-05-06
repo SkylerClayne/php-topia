@@ -1,35 +1,16 @@
 <?php 
 
 	if($_POST["submit"]){
-	            				
-	    $result="Form submitted</div>";
-
-	    if(!$_POST["name"]) {
-	       $error="<br />Please enter your name";
-	    } 
-
-	    if(!$_POST["email"]) {
-	        $error.="<br />Please enter your email address";
-	    }
-
-	    if(!$_POST["message"]) {
-	    	$error.="<br />Please enter a message";
-	    }
-
-		if ($_POST['email']!="" AND !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-	   		$error.="<br />Please enter a valid email address";
-		}
-
-		if($error){
-			$result='<div class="alert alert-danger"><strong>There were error(s) in your form:</strong>'.$error.'</div>';
-		} else {
-	    	if (mail("skylerclayne@gmail.com", "You've received a message from ".$_POST['name'], "Name: ".$_POST['name']."Email: ".$_POST['email']."Message: ".$_POST['message'])) {
+		
+		// HTML5 Does the required checking.
+		if(isset($_POST["name"], $_POST["email"], $_POST["message"])) {
+			if (mail("skylerclayne@gmail.com", "You've received a message from ".$_POST['name'], "Name: ".$_POST['name']."Email: ".$_POST['email']."Message: ".$_POST['message'])) {
 	        	$result='<div class="alert alert-success"><strong>Thank you!</strong> I\'ll be in touch.</div>';
-	        	$mailsent=1;
 			} else {
 	    		$result='<div class="alert alert-danger">Sorry, there was an error sending your message. Please try again later.</div>';
 			}
 		}
+	            		
 	}
 ?>
 
@@ -58,22 +39,22 @@
 	           	<form method="POST" role="form">
 				<legend>Contact Form</legend>
 
-				<?php echo $result; ?>
+				<?php echo $result; ?> 
 
 				<div class="form-group">
 					<label for="name">Name</label>
-					<input type="text" class="form-control" id="name" name="name" placeholder="John Snow" value="<?php echo $_POST['name']; ?>" />
+					<input type="text" class="form-control" id="name" name="name" placeholder="John Snow" value="<?php echo $_POST['name']; ?>" required />
 
 				</div>
 
 				<div class="form-group">
 					<label for="email">Email</label>
-					<input type="email" class="form-control" id="email" name="email" placeholder="johnsnow@thewall.org" value="<?php echo $_POST['email']; ?>" />
+					<input type="email" class="form-control" id="email" name="email" placeholder="johnsnow@thewall.org" value="<?php echo $_POST['email']; ?>" required />
 				</div>
 
 				<div class="form-group">
 					<label for="message">Message</label>
-					<textarea class="form-control" id="message" name="message" placeholder="Winter is Coming"><?php echo $_POST['message']; ?></textarea>
+					<textarea class="form-control" id="message" name="message" placeholder="Winter is Coming" required><?php echo $_POST['message']; ?></textarea>
 				</div>
 
 				<input type="submit" name="submit" value="Submit" class="btn btn-primary" />
