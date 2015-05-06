@@ -27,7 +27,7 @@ Jumping right into full fledged PHP development, as I think it's the best way to
 
 ## API Reference
 
-This project makes use of [Bootstrap 3](http://getbootstrap.com/ "Bootstrap") for templating the webpage.
+This project makes use of [Bootstrap 3](http://getbootstrap.com/ "Bootstrap") for templating the project.
 
 
 ## License
