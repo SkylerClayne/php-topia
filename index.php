@@ -25,6 +25,7 @@
 		} else {
 	    	if (mail("skylerclayne@gmail.com", "You've received a message from ".$_POST['name'], "Name: ".$_POST['name']."Email: ".$_POST['email']."Message: ".$_POST['message'])) {
 	        	$result='<div class="alert alert-success"><strong>Thank you!</strong> I\'ll be in touch.</div>';
+	        	$mailsent=1;
 			} else {
 	    		$result='<div class="alert alert-danger">Sorry, there was an error sending your message. Please try again later.</div>';
 			}
@@ -67,7 +68,7 @@
 
 				<div class="form-group">
 					<label for="email">Email</label>
-					<input type="text" class="form-control" id="email" name="email" placeholder="johnsnow@thewall.org" value="<?php echo $_POST['email']; ?>" />
+					<input type="email" class="form-control" id="email" name="email" placeholder="johnsnow@thewall.org" value="<?php echo $_POST['email']; ?>" />
 				</div>
 
 				<div class="form-group">
