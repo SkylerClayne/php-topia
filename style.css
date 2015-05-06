@@ -1,0 +1,48 @@
+html, body {
+	height: 100%;
+		color: white;
+
+}
+
+.center {
+	text-align: center;
+}
+
+p {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+input {
+	margin-top: 20px;
+}
+
+#success {
+	margin-top: 20px;
+	display: none;
+}
+
+#fail {
+	margin-top: 20px;
+	display: none;
+}
+
+#noloc {
+	margin-top: 20px;
+	display: none;
+}
+
+
+.container {
+	height: 100%;
+	width: 100%;
+	background-image:url(images/bg.jpeg);
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+
+  	padding-top: 120px;
+}
