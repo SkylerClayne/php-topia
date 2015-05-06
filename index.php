@@ -52,7 +52,7 @@
 	</head>
 	<body>
 		<div class="container">
-			<h1 class="text-center">PHP Fun</h1>
+			<h1 class="text-center">Example PHP Contact Form</h1>
 
 	           	<form method="POST" role="form">
 				<legend>Contact Form</legend>
