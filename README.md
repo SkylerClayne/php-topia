@@ -2,10 +2,23 @@
 
 ## Synopsis
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+This project is created for both you and I to experience my journey through learning PHP, along the way I will make terrible mistakes I would appreciate if you would notify me of my style violation with a quick issue, any and all suggestions are welcome!
 
 ## Code Example
 
+An example of a change I've made from my original algorithm in the form.php I made use of HTML5 form validation instead of a massive amount of if statements.
+
+The new changes are
+
+```PHP
+if(isset($_POST["name"], $_POST["email"], $_POST["message"]))
+```
+
+and the following HTML5 for the form validation 
+```HTML
+<input type="text" class="form-control" id="name" name="name" placeholder="John Snow" value="<?php echo $_POST['name']; ?>" required />
+
+```
 Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
 
 ## Motivation
