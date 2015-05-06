@@ -38,7 +38,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Title Page</title>
+		<title>Simple PHP Contact Form</title>
 
 		<!-- Bootstrap CSS -->
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
@@ -61,20 +61,20 @@
 
 				<div class="form-group">
 					<label for="name">Name</label>
-					<input type="text" class="form-control" id="name" name="name" placeholder="John Snow">
+					<input type="text" class="form-control" id="name" name="name" placeholder="John Snow" value="<?php echo $_POST['name']; ?>" />
 
 				</div>
 
 				<div class="form-group">
 					<label for="email">Email</label>
-					<input type="text" class="form-control" id="email" name="email" placeholder="johnsnow@thewall.org">
+					<input type="text" class="form-control" id="email" name="email" placeholder="johnsnow@thewall.org" value="<?php echo $_POST['email']; ?>" />
 				</div>
 
 				<div class="form-group">
 					<label for="message">Message</label>
-					<input type="textarea" class="form-control" id="message" name="message" placeholder="Winter is Coming">
+					<textarea class="form-control" id="message" name="message" placeholder="Winter is Coming"><?php echo $_POST['message']; ?></textarea>
 				</div>
-				
+
 				<input type="submit" name="submit" value="Submit" class="btn btn-primary" />
 
 			</form>
