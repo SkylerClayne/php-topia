@@ -1,4 +1,4 @@
-# php-topia
+# My PHP Journey
 
 ## Synopsis
 
